@@ -1,0 +1,10 @@
+Preparing data for MVP...
+Reading file...
+Writing map into file
+inds: 768	markers:2359
+Preparation for GENOTYPE data is done within 0s 
+768 common individuals between phenotype and genotype. 
+Preparation for PHENOTYPE data is Done within 0s 
+Imputing...
+Impute Genotype File is done!
+MVP data prepration accomplished successfully!
