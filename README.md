@@ -29,31 +29,24 @@ library(GAPIT3)
 ### Change working directory
 ##getwd()
 setwd("F://Data/GAPIT/")
-
-
-#these lines of code install the actual GAPIT functions from the maize genetics website
-source("http://www.zzlab.net/GAPIT/GAPIT.library.R")
-source("http://www.zzlab.net/GAPIT/gapit_functions.txt")
-
-# Now we need to import the data files that we will be using for doing the analysis. Best to have
-# data saved in a text format. If you are using R studio you can import the files using the import 
-# wizard located under the tools tab at the top.This may be the easiest as it walks you through the 
-# process. You may perfer the command line method as it gives you more controll over the import of the 
-# data. Using the following command, file.choose(), opens a browser allowing you to select the name of 
-# the file in the approriate directory. Select the file and the name of the file will appear in the
-# consol window. Copy and paste this name into the read.table command.
-
-
-# If your data is in the HapMap format, you will only need the two files-the phenotypic and the hapmap
-# file. We will do this analysis first for the sake of time. 
+# things to remember before starting
+ Now we need to import the data files that we will be using for doing the analysis. Best to have
+ data saved in a text format. If you are using R studio you can import the files using the import 
+ wizard located under the tools tab at the top.This may be the easiest as it walks you through the 
+ process. You may perfer the command line method as it gives you more controll over the import of the 
+ data. Using the following command, file.choose(), opens a browser allowing you to select the name of 
+the file in the approriate directory. Select the file and the name of the file will appear in the
+ consol window. Copy and paste this name into the read.table command.
+If your data is in the HapMap format, you will only need the two files-the phenotypic and the hapmap
+file. We will do this analysis first for the sake of time. 
 
 hapmap_geno<-read.table("geno.hmp.txt", head=F) # make sure header=F
 pheno<-read.table("pheno.txt",head=TRUE)
 
 #myCV <- read.table("Q3_ADMIX.txt", head=TRUE) ## K = 3 provided a good assessment of population structure.
 
-# good idea to check our pehontype data to make sure the file strucutre is correct and how the data
-# is distributed, checking for outliers
+good idea to check our pehontype data to make sure the file strucutre is correct and how the data
+ is distributed, checking for outliers
 
 str(pheno) # gives us information on the object, in this case a data frame and other information
 hist(pheno$protein) # creates a histogram plot of our data, things look pretty good, we have a
