@@ -17,11 +17,10 @@ the haplotype map file geno.hmp.txt  and Pheno.txt was used in this project.
 # GAPPIT
 GAPIT is a Genome Association and Prediction Integrated Tool freely available for Public since 2011. GAPIT implemented a series of methods for Genome Wide Association (GWAS) and Genomic Selection(GS).
 FarmCPU “Fixed and random model Circulating Probability Unification” join the advantages of mixed linear model and stepwise regression (fixed effect model) and overcome their disadvantages by using them iteratively.
-# to run GAPIT we need to access some tools that are located in other packages. The following lines of 
-# code will install the required packages in to your R library and then will import them so that GAPIT
-# may access them. The easiest way to do this is to highlight all of the following code and select run. 
-# Once you have done this, you will only need to use the library functions to access them at future dates.
+# Usage
+working directory GAPPIT needs to be created also geno.hmp.txt and pheno.txt need to be copied before running this script
 
+# Installation
 
 install.packages("devtools")
 devtools::install_github("jiabowang/GAPIT3",force=TRUE)
